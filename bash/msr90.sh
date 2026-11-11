@@ -44,8 +44,9 @@ while true; do
     first=$(echo "$name" | cut -d'/' -f2)
     last=$(echo "$name" | cut -d'/' -f1)
 
-    exp_month=$(echo "$exp" | cut -c1-2)
-    exp_year=$(echo "$exp" | cut -c3-4)
+    # Track 1 stores the expiry as YYMM
+    exp_year=$(echo "$exp" | cut -c1-2)
+    exp_month=$(echo "$exp" | cut -c3-4)
     expdate="$exp_month/$exp_year"
 
     echo "Card Number:     $card_number"

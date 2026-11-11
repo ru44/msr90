@@ -44,8 +44,9 @@ while true
     set last $name_parts[1]
     set first $name_parts[2]
 
-    set exp_month (string sub -s 1 -l 2 "$exp")
-    set exp_year (string sub -s 3 -l 2 "$exp")
+    # Track 1 stores the expiry as YYMM
+    set exp_year (string sub -s 1 -l 2 "$exp")
+    set exp_month (string sub -s 3 -l 2 "$exp")
     set exp_date "$exp_month/$exp_year"
 
     echo "Card Number:     $card_number"

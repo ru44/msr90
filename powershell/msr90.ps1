@@ -39,7 +39,8 @@ while ($true) {
     $lastName = $nameParts[0]
     $firstName = $nameParts[1]
     $exp = $fields[2]
-    $expDate = "$($exp.Substring(0,2))/$($exp.Substring(2,2))"
+    # Track 1 stores the expiry as YYMM
+    $expDate = "$($exp.Substring(2,2))/$($exp.Substring(0,2))"
 
     Write-Host "Card Number:     $cardNumber"
     Write-Host "Card Holder:     $firstName $lastName"
